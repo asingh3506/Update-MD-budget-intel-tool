@@ -6,24 +6,15 @@ interface Props {
   deck?: string;
   source: string;
   children: ReactNode;
-  /** Compact mode removes vertical padding — for carousel or tight grids. */
   compact?: boolean;
 }
 
-/**
- * Editorial chart frame replicating the NYT/WSJ theme from AArushi.ipynb:
- *   — Georgia serif title (19pt bold)
- *   — Italic deck in #666
- *   — Hairline rule below title
- *   — "Source:" line in #9B9B9B at bottom
- */
 export default function ChartFrame({ title, deck, source, children, compact }: Props) {
   return (
-    <div style={{ fontFamily: "var(--font)", background: "white" }}>
-      {/* Title */}
+    <div style={{ fontFamily: "Roboto,Arial,sans-serif", background: "white" }}>
       <h3
         style={{
-          fontFamily: "var(--font-headline)",
+          fontFamily: "Montserrat,Arial,sans-serif",
           fontSize: compact ? 16 : 19,
           fontWeight: 800,
           color: "#121212",
@@ -36,11 +27,10 @@ export default function ChartFrame({ title, deck, source, children, compact }: P
         {title}
       </h3>
 
-      {/* Deck (italic) */}
       {deck && (
         <p
           style={{
-            fontFamily: "var(--font-headline)",
+            fontFamily: "Montserrat,Arial,sans-serif",
             fontStyle: "italic",
             fontSize: compact ? 11 : 12,
             color: "#666666",
@@ -52,20 +42,17 @@ export default function ChartFrame({ title, deck, source, children, compact }: P
         </p>
       )}
 
-      {/* Hairline rule */}
       <div style={{ height: 1, background: "#DDDDDD", marginBottom: 10 }} />
 
-      {/* Chart body */}
       <div>{children}</div>
 
-      {/* Source line */}
       {source && (
         <div
           style={{
             marginTop: 10,
             fontSize: 10,
             color: "#9B9B9B",
-            fontFamily: "'var(--mono)'",
+            fontFamily: "var(--mono)",
             borderTop: "1px solid #EEEEEE",
             paddingTop: 6,
             lineHeight: 1.5,

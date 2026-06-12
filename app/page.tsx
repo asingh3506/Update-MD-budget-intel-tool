@@ -5,13 +5,10 @@ import ScrollReveal from "@/components/ScrollReveal";
 
 const MarylandFiscalJourneyChart = dynamic(() => import("@/components/charts/MarylandFiscalJourneyChart"), { ssr: false });
 const SankeyChart                 = dynamic(() => import("@/components/charts/SankeyChart"),                { ssr: false });
-const JcrCommerceChart            = dynamic(() => import("@/components/charts/JcrCommerceChart"),           { ssr: false });
 const DeficiencyChart             = dynamic(() => import("@/components/charts/DeficiencyChart"),            { ssr: false });
 const StructuralGapChart          = dynamic(() => import("@/components/charts/StructuralGapChart"),         { ssr: false });
-const BlueprintChart              = dynamic(() => import("@/components/charts/BlueprintChart"),             { ssr: false });
 const FederalCutCalculator        = dynamic(() => import("@/components/charts/FederalCutCalculator"),       { ssr: false });
-const ReserveChart                = dynamic(() => import("@/components/charts/ReserveChart"),               { ssr: false });
-const HealthSpendingChart         = dynamic(() => import("@/components/charts/HealthSpendingChart"),        { ssr: false });
+const HealthSpendingChart         = dynamic(() => import("@/components/charts/HealthSpendingChart"),         { ssr: false });
 const JcrCutsChart                = dynamic(() => import("@/components/charts/JcrCutsChart"),               { ssr: false });
 
 const TICKER = [
@@ -27,64 +24,14 @@ const TICKER = [
   "Gap-closing Mix: Cuts, Transfers, Bond swaps",
 ];
 
-interface ChartSection {
-  id: string;
-  label: string;
-  title: string;
-  subtitle: string;
-  viz: React.ReactNode;
-}
-
-const CHARTS: ChartSection[] = [
-  {
-    id: "fiscal-journey",
-    label: "Chart 1 of 7",
-    title: "Maryland's Fiscal Journey",
-    subtitle: "Eight-year expenditure trend FY2019–FY2026, from $43.8B to $67.3B.",
-    viz: <MarylandFiscalJourneyChart />,
-  },
-  {
-    id: "deficiency",
-    label: "Chart 2 of 7",
-    title: "One Agency Caused 77¢ of Every Dollar in Maryland's Budget Shortfall",
-    subtitle: "FY2025 deficiency: $2.9B total — MDH accounted for $2.25B.",
-    viz: <DeficiencyChart />,
-  },
-  {
-    id: "structural-gap",
-    label: "Chart 3 of 7",
-    title: "Spending Is Growing Faster Than Revenue",
-    subtitle: "Actuals only — expenditures overtook revenues in FY2025.",
-    viz: <StructuralGapChart />,
-  },
-  {
-    id: "federal-cuts",
-    label: "Chart 4 of 7",
-    title: "Federal Cut Calculator",
-    subtitle: "Model 1–20% federal reduction impact per agency.",
-    viz: <FederalCutCalculator />,
-  },
-  {
-    id: "sankey",
-    label: "Chart 5 of 7",
-    title: "Budget Flow: Revenue to Agency",
-    subtitle: "6 revenue streams → 3 fund types → 30+ agencies.",
-    viz: <SankeyChart />,
-  },
-  {
-    id: "health",
-    label: "Chart 6 of 7",
-    title: "Health Spending Grew Twice as Fast as Every Other Agency",
-    subtitle: "MDH grew 84% over 10 years at 7% CAGR.",
-    viz: <HealthSpendingChart />,
-  },
-  {
-    id: "jcr-cuts",
-    label: "Chart 7 of 7",
-    title: "The Legislature's $1.1B Response: Where the Cuts Fell",
-    subtitle: "JCR 2025 statewide reductions summary.",
-    viz: <JcrCutsChart />,
-  },
+const CHARTS = [
+  { id: "fiscal-journey",  viz: <MarylandFiscalJourneyChart /> },
+  { id: "deficiency",      viz: <DeficiencyChart /> },
+  { id: "structural-gap",  viz: <StructuralGapChart /> },
+  { id: "federal-cuts",    viz: <FederalCutCalculator /> },
+  { id: "sankey",          viz: <SankeyChart /> },
+  { id: "health",          viz: <HealthSpendingChart /> },
+  { id: "jcr-cuts",        viz: <JcrCutsChart /> },
 ];
 
 export default function TrendsAnalysisPage() {
@@ -191,68 +138,17 @@ export default function TrendsAnalysisPage() {
         </div>
       </ScrollReveal>
 
-      {/* ── Vertical chart stack ──────────────────────────────── */}
-      <div style={{ display: "flex", flexDirection: "column", gap: 32 }}>
-        {CHARTS.map((chart) => (
+      {/* ── Vertical chart stack — no outer boxes ─────────────── */}
+      <div style={{ display: "flex", flexDirection: "column" }}>
+        {CHARTS.map((chart, i) => (
           <ScrollReveal key={chart.id}>
             <div
               style={{
-                background: "#fff",
-                border: "1px solid rgba(33,16,48,0.09)",
-                borderRadius: 14,
-                overflow: "hidden",
-                boxShadow: "0 2px 10px rgba(33,16,48,0.06)",
+                padding: "32px 0",
+                borderTop: i === 0 ? "none" : "1px solid rgba(33,16,48,0.10)",
               }}
             >
-              {/* Chart header bar */}
-              <div
-                style={{
-                  padding: "14px 20px 10px",
-                  borderBottom: "1px solid rgba(33,16,48,0.07)",
-                  background: "#faf9fc",
-                }}
-              >
-                <div
-                  style={{
-                    fontFamily: "var(--mono)",
-                    fontSize: 9,
-                    color: "#802CD7",
-                    letterSpacing: "0.12em",
-                    fontWeight: 700,
-                    marginBottom: 4,
-                    textTransform: "uppercase",
-                  }}
-                >
-                  {chart.label}
-                </div>
-                <h4
-                  style={{
-                    fontFamily: "var(--font-headline)",
-                    fontSize: 16,
-                    fontWeight: 700,
-                    color: "#211030",
-                    margin: 0,
-                    lineHeight: 1.3,
-                  }}
-                >
-                  {chart.title}
-                </h4>
-                <p
-                  style={{
-                    fontFamily: "var(--font)",
-                    fontSize: 12,
-                    color: "#6B7280",
-                    margin: "4px 0 0",
-                  }}
-                >
-                  {chart.subtitle}
-                </p>
-              </div>
-
-              {/* Chart body */}
-              <div style={{ padding: "0" }}>
-                {chart.viz}
-              </div>
+              {chart.viz}
             </div>
           </ScrollReveal>
         ))}

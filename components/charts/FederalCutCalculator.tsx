@@ -96,7 +96,7 @@ export default function FederalCutCalculator() {
             onChange={(e) => setGlobalPct(Number(e.target.value))}
             style={{ flex: 1, minWidth: 240, accentColor: "#C41230" }}
           />
-          <div style={{ fontFamily: "var(--font-headline)", fontSize: 18, color: "#C41230", fontWeight: 800, minWidth: 60, textAlign: "right" }}>
+          <div style={{ fontFamily: "Montserrat,Arial,sans-serif", fontSize: 18, color: "#C41230", fontWeight: 800, minWidth: 60, textAlign: "right" }}>
             {globalPct}%
           </div>
         </div>
@@ -116,7 +116,7 @@ export default function FederalCutCalculator() {
               }}
             >
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", marginBottom: 4 }}>
-                <div style={{ fontFamily: "var(--font-headline)", fontSize: 12, color: "#121212", fontWeight: 700 }}>
+                <div style={{ fontFamily: "Montserrat,Arial,sans-serif", fontSize: 12, color: "#121212", fontWeight: 700 }}>
                   {a.label}
                 </div>
                 <div style={{ fontFamily: "var(--mono)", fontSize: 11, color: "#C41230", fontWeight: 700 }}>
@@ -130,7 +130,7 @@ export default function FederalCutCalculator() {
                 onChange={(e) => setPerAgency({ ...perAgency, [a.key]: Number(e.target.value) })}
                 style={{ width: "100%", accentColor: "#C41230" }}
               />
-              <div style={{ fontFamily: "var(--font-headline)", fontSize: 9, color: "#888", fontStyle: "italic", marginTop: 2 }}>
+              <div style={{ fontFamily: "Montserrat,Arial,sans-serif", fontSize: 9, color: "#888", fontStyle: "italic", marginTop: 2 }}>
                 ${a.fed.toFixed(2)}B federal · {a.pct}% of agency · {a.note}
               </div>
             </div>
@@ -165,7 +165,7 @@ export default function FederalCutCalculator() {
             <div style={{ fontFamily: "var(--mono)", fontSize: 9, color: "#666", letterSpacing: "0.08em", fontWeight: 700 }}>
               {k.label}
             </div>
-            <div style={{ fontFamily: "var(--font-headline)", fontSize: 22, color: k.color, fontWeight: 900, marginTop: 2 }}>
+            <div style={{ fontFamily: "Montserrat,Arial,sans-serif", fontSize: 22, color: k.color, fontWeight: 900, marginTop: 2 }}>
               {k.value}
             </div>
           </div>
@@ -185,7 +185,7 @@ export default function FederalCutCalculator() {
             },
             text: results.rows.map((r) => `−$${r.lossM}M`),
             textposition: "outside",
-            textfont: { family: "var(--font-headline)", size: 10 },
+            textfont: { family: "Montserrat,Arial,sans-serif", size: 10 },
             hovertemplate:
               "<b>%{x}</b><br>Loss: $%{text}<br>Federal base: $%{customdata[0]}B<br>Cut applied: %{customdata[1]}%<extra></extra>",
             customdata: results.rows.map((r) => [r.fed.toFixed(2), r.cutPct]),
@@ -194,7 +194,7 @@ export default function FederalCutCalculator() {
         layout={{
           paper_bgcolor: "white",
           plot_bgcolor: "white",
-          font: { family: "var(--font-headline)", size: 11, color: "#121212" },
+          font: { family: "Montserrat,Arial,sans-serif", size: 11, color: "#121212" },
           margin: { t: 18, r: 30, b: 120, l: 70 },
           xaxis: { tickangle: -22, showgrid: false },
           yaxis: {

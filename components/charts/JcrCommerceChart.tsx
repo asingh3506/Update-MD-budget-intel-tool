@@ -31,14 +31,14 @@ export default function JcrCommerceChart() {
             marker: { color: "#C41230", line: { color: "#121212", width: 0.5 } },
             text: cuts.map((v) => `−$${v.toFixed(1)}M`),
             textposition: "outside",
-            textfont: { family: "var(--font-headline)", size: 11 },
+            textfont: { family: "Montserrat,Arial,sans-serif", size: 11 },
             hovertemplate: "<b>%{y}</b><br>−$%{x:.2f}M<extra></extra>",
           },
         ]}
         layout={{
           paper_bgcolor: "white",
           plot_bgcolor: "white",
-          font: { family: "var(--font-headline)", size: 11, color: "#121212" },
+          font: { family: "Montserrat,Arial,sans-serif", size: 11, color: "#121212" },
           margin: { t: 18, r: 80, b: 40, l: 160 },
           xaxis: {
             title: { text: "Cut ($ Millions)" } as never,
@@ -52,7 +52,7 @@ export default function JcrCommerceChart() {
               xref: "paper", yref: "paper", x: 0.97, y: 0.04,
               text: `<b>Combined total: −$${total.toFixed(2)}M</b>`,
               showarrow: false,
-              font: { color: "#C41230", size: 12, family: "var(--font-headline)" },
+              font: { color: "#C41230", size: 12, family: "Montserrat,Arial,sans-serif" },
               bgcolor: "rgba(255,255,255,0.9)",
               bordercolor: "#C41230",
               borderwidth: 1,

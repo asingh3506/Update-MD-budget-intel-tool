@@ -32,7 +32,7 @@ export default function DeficiencyChart() {
           overflow: "hidden",
           marginBottom: 14,
           border: "1px solid #DDDDDD",
-          fontFamily: "var(--font-headline)",
+          fontFamily: "Montserrat,Arial,sans-serif",
         }}
       >
         <div
@@ -75,14 +75,14 @@ export default function DeficiencyChart() {
             marker: { color: colors, line: { color: "#121212", width: 0.5 } },
             text: values.map((v) => `$${v.toFixed(1)}M`),
             textposition: "outside",
-            textfont: { family: "var(--font-headline)", size: 10, color: "#121212" },
+            textfont: { family: "Montserrat,Arial,sans-serif", size: 10, color: "#121212" },
             hovertemplate: "<b>%{y}</b><br>$%{x:,.1f}M<extra></extra>",
           },
         ]}
         layout={{
           paper_bgcolor: "white",
           plot_bgcolor: "white",
-          font: { family: "var(--font-headline)", size: 11, color: "#121212" },
+          font: { family: "Montserrat,Arial,sans-serif", size: 11, color: "#121212" },
           margin: { t: 10, r: 80, b: 40, l: 180 },
           xaxis: {
             title: { text: "Deficiency Appropriation ($ Millions)" } as never,
@@ -99,7 +99,7 @@ export default function DeficiencyChart() {
               y: 1.05,
               text: `Total: $${total.toFixed(1)}M`,
               showarrow: false,
-              font: { color: "#121212", size: 11, family: "var(--font-headline)" },
+              font: { color: "#121212", size: 11, family: "Montserrat,Arial,sans-serif" },
               xanchor: "right",
             },
           ],

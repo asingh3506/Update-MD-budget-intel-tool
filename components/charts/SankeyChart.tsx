@@ -469,7 +469,7 @@ export default function SankeyChart() {
     <div style={{ padding: "16px 20px 0" }}>
       <h3
         style={{
-          fontFamily: "var(--font-headline)",
+          fontFamily: "Montserrat,Arial,sans-serif",
           fontSize: 18,
           fontWeight: 800,
           color: "var(--nxt-deep)",
