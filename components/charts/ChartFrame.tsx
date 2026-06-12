@@ -52,7 +52,7 @@ export default function ChartFrame({ title, deck, source, children, compact }: P
             marginTop: 10,
             fontSize: 10,
             color: "#9B9B9B",
-            fontFamily: "var(--mono)",
+            fontFamily: "var(--font)",
             borderTop: "1px solid #EEEEEE",
             paddingTop: 6,
             lineHeight: 1.5,

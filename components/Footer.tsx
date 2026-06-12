@@ -35,7 +35,7 @@ function FooterLink({ label, href }: { label: string; href: string }) {
 }
 
 const COL_LABEL: React.CSSProperties = {
-  fontFamily: "var(--mono)",
+  fontFamily: "var(--font)",
   fontSize: 9,
   color: "rgba(179,118,246,0.7)",
   letterSpacing: "0.14em",
@@ -99,7 +99,7 @@ export default function Footer() {
               border: "1px solid rgba(179,118,246,0.30)",
               borderRadius: 6,
               padding: "4px 10px",
-              fontFamily: "var(--mono)",
+              fontFamily: "var(--font)",
               fontSize: 9,
               color: "#B376F6",
               letterSpacing: "0.10em",
@@ -139,7 +139,7 @@ export default function Footer() {
           </p>
           <p
             style={{
-              fontFamily: "var(--mono)",
+              fontFamily: "var(--font)",
               fontSize: 9,
               color: "rgba(240,240,240,0.40)",
               lineHeight: 1.7,
@@ -167,7 +167,7 @@ export default function Footer() {
       >
         <span
           style={{
-            fontFamily: "var(--mono)",
+            fontFamily: "var(--font)",
             fontSize: 9,
             color: "rgba(240,240,240,0.35)",
             letterSpacing: "0.06em",
@@ -190,7 +190,7 @@ export default function Footer() {
           <span style={{ fontSize: 10 }}>🔒</span>
           <span
             style={{
-              fontFamily: "var(--mono)",
+              fontFamily: "var(--font)",
               fontSize: 9,
               color: "#B376F6",
               letterSpacing: "0.08em",

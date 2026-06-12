@@ -133,10 +133,10 @@ function KpiCard({ card }: { card: KpiCard }) {
       >
         {card.value}
       </div>
-      <div style={{ fontSize: 10, color: dirColor, fontFamily: "var(--mono)", fontWeight: 600, marginBottom: 6 }}>
+      <div style={{ fontSize: 10, color: dirColor, fontFamily: "var(--font)", fontWeight: 600, marginBottom: 6 }}>
         {card.change}
       </div>
-      <div style={{ fontSize: 9, color: "var(--text-mute)", fontFamily: "var(--mono)", borderTop: "1px dashed var(--line)", paddingTop: 5 }}>
+      <div style={{ fontSize: 9, color: "var(--text-mute)", fontFamily: "var(--font)", borderTop: "1px dashed var(--line)", paddingTop: 5 }}>
         {card.cite}
       </div>
     </div>
@@ -147,11 +147,11 @@ export default function KpiRow() {
   return (
     <div style={{ marginBottom: 24 }}>
       <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 10 }}>
-        <span style={{ fontFamily: "var(--mono)", fontSize: 9, letterSpacing: "0.12em", color: "var(--nxt-deep)", fontWeight: 700 }}>
+        <span style={{ fontFamily: "var(--font)", fontSize: 9, letterSpacing: "0.12em", color: "var(--nxt-deep)", fontWeight: 700 }}>
           KEY FISCAL INDICATORS
         </span>
         <div style={{ flex: 1, height: 1, background: "var(--line)" }} />
-        <span style={{ fontFamily: "var(--mono)", fontSize: 9, color: "var(--text-mute)" }}>
+        <span style={{ fontFamily: "var(--font)", fontSize: 9, color: "var(--text-mute)" }}>
           FY2027 proposed operating budget
         </span>
       </div>

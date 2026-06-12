@@ -320,7 +320,7 @@ body{background:#fff}
 .ctrl{display:flex;align-items:center;gap:10px;padding:10px 14px;border-bottom:1px solid #ddd;flex-wrap:wrap}
 .yr-btn{border:1.5px solid #ddd;background:white;border-radius:6px;padding:5px 14px;font-size:12px;cursor:pointer;font-weight:600;transition:all .15s}
 .yr-btn.active{background:#1D4F91;color:white;border-color:#1D4F91}
-.mode-tag{font-family:'JetBrains Mono',monospace;font-size:11px;color:#555;letter-spacing:1px;margin-left:16px}
+.mode-tag{font-family:'Roboto',Arial,sans-serif;font-size:11px;color:#555;letter-spacing:1px;margin-left:16px}
 .back-btn{border:1.5px solid #C41230;background:#fff;color:#C41230;border-radius:6px;padding:5px 14px;font-size:12px;cursor:pointer;font-weight:700;display:none;margin-left:10px}
 .back-btn.show{display:inline-block}
 .back-btn:hover{background:#C41230;color:#fff}
@@ -459,7 +459,7 @@ export default function SankeyChart() {
 
   if (loading) {
     return (
-      <div style={{ height: 460, display: "flex", alignItems: "center", justifyContent: "center", color: "var(--text-mute)", fontFamily: "var(--mono)", fontSize: 11 }}>
+      <div style={{ height: 460, display: "flex", alignItems: "center", justifyContent: "center", color: "var(--text-mute)", fontFamily: "var(--font)", fontSize: 11 }}>
         Loading budget flow data...
       </div>
     );

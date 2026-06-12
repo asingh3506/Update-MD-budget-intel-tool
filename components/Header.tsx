@@ -57,7 +57,7 @@ export default function Header() {
           </span>
           <span
             style={{
-              fontFamily: "var(--mono)",
+              fontFamily: "var(--font)",
               fontSize: 9,
               color: "rgba(179,118,246,0.8)",
               letterSpacing: "0.08em",

@@ -11,7 +11,7 @@ export default function CountyMapPage() {
       <div style={{ marginBottom: 24 }}>
         <div
           style={{
-            fontFamily: "var(--mono)",
+            fontFamily: "var(--font)",
             fontSize: 10,
             color: "#802CD7",
             letterSpacing: "0.18em",
@@ -93,7 +93,7 @@ export default function CountyMapPage() {
           <div>
             <div
               style={{
-                fontFamily: "var(--mono)",
+                fontFamily: "var(--font)",
                 fontSize: 9,
                 color: "#802CD7",
                 letterSpacing: "0.12em",

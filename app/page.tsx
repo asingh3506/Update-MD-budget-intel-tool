@@ -42,7 +42,7 @@ export default function TrendsAnalysisPage() {
       <div style={{ marginBottom: 20 }}>
         <div
           style={{
-            fontFamily: "var(--mono)",
+            fontFamily: "var(--font)",
             fontSize: 10,
             color: "#802CD7",
             letterSpacing: "0.18em",
@@ -99,7 +99,7 @@ export default function TrendsAnalysisPage() {
             padding: "9px 0",
             whiteSpace: "nowrap",
             animation: "tickerScroll 55s linear infinite",
-            fontFamily: "var(--mono)",
+            fontFamily: "var(--font)",
             fontSize: 11,
             letterSpacing: "0.03em",
           }}
@@ -132,7 +132,7 @@ export default function TrendsAnalysisPage() {
             Key Trends &amp; Insights
           </h3>
           <div style={{ flex: 1, height: 1, background: "rgba(33,16,48,0.12)" }} />
-          <span style={{ fontFamily: "var(--mono)", fontSize: 9, color: "#802CD7", letterSpacing: "0.1em" }}>
+          <span style={{ fontFamily: "var(--font)", fontSize: 9, color: "#802CD7", letterSpacing: "0.1em" }}>
             SCROLL TO EXPLORE
           </span>
         </div>

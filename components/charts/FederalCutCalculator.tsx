@@ -54,7 +54,7 @@ export default function FederalCutCalculator() {
             key={m}
             onClick={() => setMode(m)}
             style={{
-              fontFamily: "var(--mono)",
+              fontFamily: "var(--font)",
               fontSize: 10,
               letterSpacing: "0.08em",
               padding: "6px 14px",
@@ -86,7 +86,7 @@ export default function FederalCutCalculator() {
             flexWrap: "wrap",
           }}
         >
-          <div style={{ fontFamily: "var(--mono)", fontSize: 10, color: "#C41230", fontWeight: 700, letterSpacing: "0.08em" }}>
+          <div style={{ fontFamily: "var(--font)", fontSize: 10, color: "#C41230", fontWeight: 700, letterSpacing: "0.08em" }}>
             FEDERAL CUT
           </div>
           <input
@@ -119,7 +119,7 @@ export default function FederalCutCalculator() {
                 <div style={{ fontFamily: "Montserrat,Arial,sans-serif", fontSize: 12, color: "#121212", fontWeight: 700 }}>
                   {a.label}
                 </div>
-                <div style={{ fontFamily: "var(--mono)", fontSize: 11, color: "#C41230", fontWeight: 700 }}>
+                <div style={{ fontFamily: "var(--font)", fontSize: 11, color: "#C41230", fontWeight: 700 }}>
                   {perAgency[a.key]}%
                 </div>
               </div>
@@ -162,7 +162,7 @@ export default function FederalCutCalculator() {
               borderRadius: 5,
             }}
           >
-            <div style={{ fontFamily: "var(--mono)", fontSize: 9, color: "#666", letterSpacing: "0.08em", fontWeight: 700 }}>
+            <div style={{ fontFamily: "var(--font)", fontSize: 9, color: "#666", letterSpacing: "0.08em", fontWeight: 700 }}>
               {k.label}
             </div>
             <div style={{ fontFamily: "Montserrat,Arial,sans-serif", fontSize: 22, color: k.color, fontWeight: 900, marginTop: 2 }}>

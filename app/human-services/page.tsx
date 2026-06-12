@@ -60,7 +60,7 @@ function PlaceholderChart({ title, description }: { title: string; description: 
         </div>
         <span
           style={{
-            fontFamily: "var(--mono)",
+            fontFamily: "var(--font)",
             fontSize: 10,
             color: "#802CD7",
             letterSpacing: "0.12em",
@@ -86,7 +86,7 @@ export default function HumanServicesPage() {
       <div style={{ marginBottom: 24 }}>
         <div
           style={{
-            fontFamily: "var(--mono)",
+            fontFamily: "var(--font)",
             fontSize: 10,
             color: "#802CD7",
             letterSpacing: "0.18em",
@@ -140,7 +140,7 @@ export default function HumanServicesPage() {
       >
         <div
           style={{
-            fontFamily: "var(--mono)",
+            fontFamily: "var(--font)",
             fontSize: 9,
             color: "#802CD7",
             letterSpacing: "0.12em",

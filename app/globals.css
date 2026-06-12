@@ -1,11 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Roboto:wght@300;400;500;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Roboto:wght@300;400;500;700&display=swap');
 
 @import "tailwindcss";
 
 /* Override Tailwind v4's --font-sans so every utility class and base reset uses Roboto */
 @theme {
   --font-sans: 'Roboto', Arial, sans-serif;
-  --font-mono: 'JetBrains Mono', monospace;
 }
 
 :root {
@@ -36,7 +35,6 @@
   --flag-gold:    #E8A317;
   --font:         'Roboto', Arial, sans-serif;
   --font-headline:'Montserrat', Arial, sans-serif;
-  --mono:         'JetBrains Mono', monospace;
   --c-ink:        #121212;
   --c-red:        #C41230;
   --c-blue:       #1D4F91;
@@ -92,13 +90,13 @@ body {
   font-size: 11px;
   font-weight: 600;
   color: #92400e;
-  font-family: var(--mono);
+  font-family: var(--font);
   border-radius: 0 4px 4px 0;
   margin-bottom: 10px;
 }
 
 .source-cite {
-  font-family: var(--mono);
+  font-family: var(--font);
   font-size: 9px;
   color: var(--text-mute);
   text-transform: uppercase;
@@ -142,7 +140,7 @@ body {
 .carousel-scroll { scrollbar-width: thin; scrollbar-color: var(--nxt-purple) var(--line-soft); }
 
 .mono-label {
-  font-family: var(--mono);
+  font-family: var(--font);
   font-size: 9px;
   color: var(--text-mute);
   text-transform: uppercase;

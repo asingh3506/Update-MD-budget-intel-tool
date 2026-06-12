@@ -62,7 +62,7 @@ export default function GuardrailsPage() {
         <div style={{ maxWidth: 1060, margin: "0 auto" }}>
           <div
             style={{
-              fontFamily: "var(--mono)",
+              fontFamily: "var(--font)",
               fontSize: 10,
               letterSpacing: "0.22em",
               fontWeight: 700,
@@ -121,7 +121,7 @@ export default function GuardrailsPage() {
             />
             <div
               style={{
-                fontFamily: "var(--mono)",
+                fontFamily: "var(--font)",
                 fontSize: 10,
                 letterSpacing: "0.2em",
                 fontWeight: 800,
@@ -142,7 +142,7 @@ export default function GuardrailsPage() {
               {[["4", "Official report types"], ["10", "Source-cited visualizations"], ["80+", "Agencies in Deep-Dive"], ["100%", "Traceable to exact page"]].map(([val, lbl]) => (
                 <div key={lbl} style={{ borderLeft: "2px solid #b376f6", paddingLeft: 14 }}>
                   <div style={{ fontSize: 24, fontWeight: 900, color: "#b376f6" }}>{val}</div>
-                  <div style={{ fontSize: 10, color: "rgba(255,255,255,0.55)", fontFamily: "var(--mono)", letterSpacing: "0.06em", marginTop: 3 }}>{lbl}</div>
+                  <div style={{ fontSize: 10, color: "rgba(255,255,255,0.55)", fontFamily: "var(--font)", letterSpacing: "0.06em", marginTop: 3 }}>{lbl}</div>
                 </div>
               ))}
             </div>
@@ -152,7 +152,7 @@ export default function GuardrailsPage() {
         {/* ── HARD LIMITS ─────────────────────────────────────── */}
         <ScrollReveal delay={60}>
           <div style={{ marginBottom: 56 }}>
-            <div style={{ fontFamily: "var(--mono)", fontSize: 10, color: "var(--nxt-blue-vi)", letterSpacing: "0.18em", fontWeight: 700, marginBottom: 8, textTransform: "uppercase" }}>
+            <div style={{ fontFamily: "var(--font)", fontSize: 10, color: "var(--nxt-blue-vi)", letterSpacing: "0.18em", fontWeight: 700, marginBottom: 8, textTransform: "uppercase" }}>
               Hard Limits
             </div>
             <h2 style={{ fontSize: 26, fontWeight: 900, color: "var(--nxt-dark)", marginBottom: 6, letterSpacing: "-0.3px" }}>
@@ -188,7 +188,7 @@ export default function GuardrailsPage() {
                         fontSize: 14,
                         fontWeight: 900,
                         color: "#fff",
-                        fontFamily: "var(--mono)",
+                        fontFamily: "var(--font)",
                       }}
                     >
                       {String(idx + 1).padStart(2, "0")}
@@ -209,7 +209,7 @@ export default function GuardrailsPage() {
         {/* ── COMMITMENTS ─────────────────────────────────────── */}
         <ScrollReveal delay={60}>
           <div style={{ marginBottom: 56 }}>
-            <div style={{ fontFamily: "var(--mono)", fontSize: 10, color: "var(--nxt-blue-vi)", letterSpacing: "0.18em", fontWeight: 700, marginBottom: 8, textTransform: "uppercase" }}>
+            <div style={{ fontFamily: "var(--font)", fontSize: 10, color: "var(--nxt-blue-vi)", letterSpacing: "0.18em", fontWeight: 700, marginBottom: 8, textTransform: "uppercase" }}>
               Commitments
             </div>
             <h2 style={{ fontSize: 26, fontWeight: 900, color: "var(--nxt-dark)", marginBottom: 6, letterSpacing: "-0.3px" }}>
@@ -264,7 +264,7 @@ export default function GuardrailsPage() {
         {/* ── OFFICIAL SOURCE CALLOUT ─────────────────────────── */}
         <ScrollReveal delay={60}>
           <div style={{ marginBottom: 48 }}>
-            <div style={{ fontFamily: "var(--mono)", fontSize: 10, color: "var(--nxt-blue-vi)", letterSpacing: "0.18em", fontWeight: 700, marginBottom: 8, textTransform: "uppercase" }}>
+            <div style={{ fontFamily: "var(--font)", fontSize: 10, color: "var(--nxt-blue-vi)", letterSpacing: "0.18em", fontWeight: 700, marginBottom: 8, textTransform: "uppercase" }}>
               Official Data Source
             </div>
             <h2 style={{ fontSize: 26, fontWeight: 900, color: "var(--nxt-dark)", marginBottom: 16, letterSpacing: "-0.3px" }}>
@@ -288,7 +288,7 @@ export default function GuardrailsPage() {
                   borderLeft: "4px solid var(--nxt-purple)",
                   borderRadius: 8,
                   textDecoration: "none",
-                  fontFamily: "var(--mono)",
+                  fontFamily: "var(--font)",
                   fontSize: 12,
                   fontWeight: 700,
                   color: "var(--nxt-dark)",
@@ -332,7 +332,7 @@ export default function GuardrailsPage() {
                 borderRadius: 8,
                 textDecoration: "none",
                 whiteSpace: "nowrap",
-                fontFamily: "var(--mono)",
+                fontFamily: "var(--font)",
                 letterSpacing: "0.06em",
               }}
             >

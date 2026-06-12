@@ -157,7 +157,7 @@ function NistAccordion() {
                   alignItems: "center",
                   justifyContent: "center",
                   writingMode: "vertical-rl",
-                  fontFamily: "var(--mono)",
+                  fontFamily: "var(--font)",
                   fontSize: 10,
                   fontWeight: 900,
                   letterSpacing: "0.15em",
@@ -173,7 +173,7 @@ function NistAccordion() {
                   <div style={{ fontWeight: 700, fontSize: 13, color: "var(--nxt-dark)", marginBottom: 3 }}>{item.summary}</div>
                   <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
                     <span style={{ width: 8, height: 8, borderRadius: "50%", background: item.compliant ? "#15803D" : "#DC2626", display: "inline-block", flexShrink: 0 }} />
-                    <span style={{ fontFamily: "var(--mono)", fontSize: 9, color: item.compliant ? "#15803D" : "#DC2626", fontWeight: 700, letterSpacing: "0.1em" }}>
+                    <span style={{ fontFamily: "var(--font)", fontSize: 9, color: item.compliant ? "#15803D" : "#DC2626", fontWeight: 700, letterSpacing: "0.1em" }}>
                       {item.compliant ? "ADDRESSED" : "NOT ADDRESSED"}
                     </span>
                   </div>
@@ -189,7 +189,7 @@ function NistAccordion() {
                   {item.detail}
                 </p>
                 <div style={{ background: "var(--line-soft)", borderRadius: 6, padding: "10px 14px" }}>
-                  <span style={{ fontFamily: "var(--mono)", fontSize: 9, fontWeight: 700, color: "#15803D", letterSpacing: "0.1em", textTransform: "uppercase", marginRight: 8 }}>Assessment</span>
+                  <span style={{ fontFamily: "var(--font)", fontSize: 9, fontWeight: 700, color: "#15803D", letterSpacing: "0.1em", textTransform: "uppercase", marginRight: 8 }}>Assessment</span>
                   <span style={{ fontSize: 12, color: "var(--text-soft)" }}>{item.notes}</span>
                 </div>
               </div>
@@ -240,7 +240,7 @@ export default function MethodologyPage() {
         <div style={{ maxWidth: 1060, margin: "0 auto" }}>
           <div
             style={{
-              fontFamily: "var(--mono)",
+              fontFamily: "var(--font)",
               fontSize: 10,
               letterSpacing: "0.22em",
               fontWeight: 700,
@@ -270,7 +270,7 @@ export default function MethodologyPage() {
             {[["4", "Official report types"], ["10", "Home page visualizations"], ["80+", "Agencies in Deep-Dive"], ["100%", "Source-cited to exact PDF page"]].map(([val, label]) => (
               <div key={label}>
                 <div style={{ fontSize: 30, fontWeight: 900, color: "#b376f6", lineHeight: 1 }}>{val}</div>
-                <div style={{ fontSize: 11, color: "rgba(255,255,255,0.6)", fontFamily: "var(--mono)", letterSpacing: "0.08em", marginTop: 4 }}>{label}</div>
+                <div style={{ fontSize: 11, color: "rgba(255,255,255,0.6)", fontFamily: "var(--font)", letterSpacing: "0.08em", marginTop: 4 }}>{label}</div>
               </div>
             ))}
           </div>
@@ -282,7 +282,7 @@ export default function MethodologyPage() {
         {/* ── WHAT'S NOVEL ────────────────────────────────────── */}
         <ScrollReveal>
           <div style={{ marginBottom: 56 }}>
-            <div style={{ fontFamily: "var(--mono)", fontSize: 10, color: "var(--nxt-blue-vi)", letterSpacing: "0.18em", fontWeight: 700, marginBottom: 8, textTransform: "uppercase" }}>
+            <div style={{ fontFamily: "var(--font)", fontSize: 10, color: "var(--nxt-blue-vi)", letterSpacing: "0.18em", fontWeight: 700, marginBottom: 8, textTransform: "uppercase" }}>
               What Makes This Different
             </div>
             <h2 style={{ fontSize: 26, fontWeight: 900, color: "var(--nxt-dark)", marginBottom: 16, letterSpacing: "-0.3px" }}>
@@ -302,7 +302,7 @@ export default function MethodologyPage() {
         {/* ── PIPELINE ────────────────────────────────────────── */}
         <ScrollReveal delay={60}>
           <div style={{ marginBottom: 56 }}>
-            <div style={{ fontFamily: "var(--mono)", fontSize: 10, color: "var(--nxt-blue-vi)", letterSpacing: "0.18em", fontWeight: 700, marginBottom: 8, textTransform: "uppercase" }}>
+            <div style={{ fontFamily: "var(--font)", fontSize: 10, color: "var(--nxt-blue-vi)", letterSpacing: "0.18em", fontWeight: 700, marginBottom: 8, textTransform: "uppercase" }}>
               The Pipeline
             </div>
             <h2 style={{ fontSize: 26, fontWeight: 900, color: "var(--nxt-dark)", marginBottom: 24, letterSpacing: "-0.3px" }}>
@@ -322,8 +322,8 @@ export default function MethodologyPage() {
                     }}
                   >
                     <div style={{ background: step.color, padding: "10px 18px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-                      <span style={{ fontFamily: "var(--mono)", fontSize: 9, fontWeight: 800, color: "rgba(255,255,255,0.75)", letterSpacing: "0.18em" }}>{step.label}</span>
-                      <span style={{ fontFamily: "var(--mono)", fontSize: 18, fontWeight: 900, color: "rgba(255,255,255,0.25)" }}>{step.num}</span>
+                      <span style={{ fontFamily: "var(--font)", fontSize: 9, fontWeight: 800, color: "rgba(255,255,255,0.75)", letterSpacing: "0.18em" }}>{step.label}</span>
+                      <span style={{ fontFamily: "var(--font)", fontSize: 18, fontWeight: 900, color: "rgba(255,255,255,0.25)" }}>{step.num}</span>
                     </div>
                     <div style={{ padding: "18px 18px 20px" }}>
                       <div style={{ fontWeight: 800, fontSize: 15, color: "var(--nxt-dark)", marginBottom: 8 }}>{step.title}</div>
@@ -340,7 +340,7 @@ export default function MethodologyPage() {
                 return [card, arrow];
               })}
             </div>
-            <p style={{ fontSize: 11, color: "var(--text-mute)", marginTop: 12, fontFamily: "var(--mono)", letterSpacing: "0.04em" }}>
+            <p style={{ fontSize: 11, color: "var(--text-mute)", marginTop: 12, fontFamily: "var(--font)", letterSpacing: "0.04em" }}>
               Anything the system cannot source, it does not show. See{" "}
               <a href="/guardrails" style={{ color: "var(--nxt-blue-vi)", fontWeight: 700 }}>Guardrails</a> for the explicit list.
             </p>
@@ -350,7 +350,7 @@ export default function MethodologyPage() {
         {/* ── PROBLEMS WE SOLVED ──────────────────────────────── */}
         <ScrollReveal delay={80}>
           <div style={{ marginBottom: 56 }}>
-            <div style={{ fontFamily: "var(--mono)", fontSize: 10, color: "var(--nxt-blue-vi)", letterSpacing: "0.18em", fontWeight: 700, marginBottom: 8, textTransform: "uppercase" }}>
+            <div style={{ fontFamily: "var(--font)", fontSize: 10, color: "var(--nxt-blue-vi)", letterSpacing: "0.18em", fontWeight: 700, marginBottom: 8, textTransform: "uppercase" }}>
               Design Decisions
             </div>
             <h2 style={{ fontSize: 26, fontWeight: 900, color: "var(--nxt-dark)", marginBottom: 6, letterSpacing: "-0.3px" }}>
@@ -375,9 +375,9 @@ export default function MethodologyPage() {
                     <div style={{ width: 6, flexShrink: 0, background: item.color }} />
                     <div style={{ flex: 1, padding: "20px 22px 18px" }}>
                       <div style={{ display: "flex", alignItems: "flex-start", gap: 14, marginBottom: 10 }}>
-                        <span style={{ fontFamily: "var(--mono)", fontSize: 22, fontWeight: 900, color: "var(--line)", lineHeight: 1 }}>{item.num}</span>
+                        <span style={{ fontFamily: "var(--font)", fontSize: 22, fontWeight: 900, color: "var(--line)", lineHeight: 1 }}>{item.num}</span>
                         <div>
-                          <div style={{ fontFamily: "var(--mono)", fontSize: 9, fontWeight: 700, color: item.color, letterSpacing: "0.14em", textTransform: "uppercase", marginBottom: 4 }}>{item.tag}</div>
+                          <div style={{ fontFamily: "var(--font)", fontSize: 9, fontWeight: 700, color: item.color, letterSpacing: "0.14em", textTransform: "uppercase", marginBottom: 4 }}>{item.tag}</div>
                           <div style={{ fontWeight: 800, fontSize: 14, color: "var(--nxt-dark)", lineHeight: 1.35 }}>Problem: {item.problem}</div>
                         </div>
                       </div>
@@ -395,7 +395,7 @@ export default function MethodologyPage() {
         {/* ── NXT DNA PILLARS ─────────────────────────────────── */}
         <ScrollReveal delay={60}>
           <div style={{ marginBottom: 56 }}>
-            <div style={{ fontFamily: "var(--mono)", fontSize: 10, color: "var(--nxt-blue-vi)", letterSpacing: "0.18em", fontWeight: 700, marginBottom: 8, textTransform: "uppercase" }}>
+            <div style={{ fontFamily: "var(--font)", fontSize: 10, color: "var(--nxt-blue-vi)", letterSpacing: "0.18em", fontWeight: 700, marginBottom: 8, textTransform: "uppercase" }}>
               NXT DNA
             </div>
             <h2 style={{ fontSize: 26, fontWeight: 900, color: "var(--nxt-dark)", marginBottom: 6, letterSpacing: "-0.3px" }}>
@@ -434,7 +434,7 @@ export default function MethodologyPage() {
         {/* ── NIST AI RMF ACCORDION ───────────────────────────── */}
         <ScrollReveal delay={60}>
           <div style={{ marginBottom: 56 }}>
-            <div style={{ fontFamily: "var(--mono)", fontSize: 10, color: "var(--nxt-blue-vi)", letterSpacing: "0.18em", fontWeight: 700, marginBottom: 8, textTransform: "uppercase" }}>
+            <div style={{ fontFamily: "var(--font)", fontSize: 10, color: "var(--nxt-blue-vi)", letterSpacing: "0.18em", fontWeight: 700, marginBottom: 8, textTransform: "uppercase" }}>
               Risk Framework
             </div>
             <h2 style={{ fontSize: 26, fontWeight: 900, color: "var(--nxt-dark)", marginBottom: 6, letterSpacing: "-0.3px" }}>
@@ -453,7 +453,7 @@ export default function MethodologyPage() {
         {/* ── DATA SOURCES ────────────────────────────────────── */}
         <ScrollReveal delay={60}>
           <div>
-            <div style={{ fontFamily: "var(--mono)", fontSize: 10, color: "var(--nxt-blue-vi)", letterSpacing: "0.18em", fontWeight: 700, marginBottom: 8, textTransform: "uppercase" }}>
+            <div style={{ fontFamily: "var(--font)", fontSize: 10, color: "var(--nxt-blue-vi)", letterSpacing: "0.18em", fontWeight: 700, marginBottom: 8, textTransform: "uppercase" }}>
               Source Documents
             </div>
             <h2 style={{ fontSize: 26, fontWeight: 900, color: "var(--nxt-dark)", marginBottom: 6, letterSpacing: "-0.3px" }}>
@@ -476,7 +476,7 @@ export default function MethodologyPage() {
                 borderLeft: "4px solid var(--nxt-purple)",
                 borderRadius: 8,
                 textDecoration: "none",
-                fontFamily: "var(--mono)",
+                fontFamily: "var(--font)",
                 fontSize: 12,
                 fontWeight: 700,
                 color: "var(--nxt-dark)",

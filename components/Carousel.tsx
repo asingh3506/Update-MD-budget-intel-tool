@@ -168,7 +168,7 @@ function CitationBlock({ citations }: { citations: CitationLink[] }) {
     >
       <div
         style={{
-          fontFamily: "'var(--mono)'",
+          fontFamily: "'var(--font)'",
           fontSize: 10,
           letterSpacing: "2px",
           color: "#8A1538",
@@ -195,7 +195,7 @@ function CitationBlock({ citations }: { citations: CitationLink[] }) {
               color: "#1a1a1a",
               border: "1px solid #1a1a1a",
               textDecoration: "none",
-              fontFamily: "'var(--mono)'",
+              fontFamily: "'var(--font)'",
               fontSize: 11,
               fontWeight: 700,
               borderRadius: 1,
@@ -390,7 +390,7 @@ export default function Carousel() {
 
           <span
             style={{
-              fontFamily: "var(--mono)",
+              fontFamily: "var(--font)",
               fontSize: 11,
               color: "var(--text-mute)",
               minWidth: 48,
@@ -522,7 +522,7 @@ export default function Carousel() {
                     <div style={{ display: "flex", flexDirection: "column", gap: 5 }}>
                       {s.citations.map((c, idx) => (
                         <a key={idx} href={c.url} target="_blank" rel="noopener noreferrer"
-                          style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "7px 10px", background: "#fff", color: "#1a1a1a", border: "1px solid #1a1a1a", textDecoration: "none", fontFamily: "var(--mono)", fontSize: 9, fontWeight: 700, lineHeight: 1.4, borderRadius: 1 }}>
+                          style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "7px 10px", background: "#fff", color: "#1a1a1a", border: "1px solid #1a1a1a", textDecoration: "none", fontFamily: "var(--font)", fontSize: 9, fontWeight: 700, lineHeight: 1.4, borderRadius: 1 }}>
                           <span>📄 {c.label}</span>
                           <span style={{ opacity: 0.65, marginLeft: 8, flexShrink: 0 }}>↗</span>
                         </a>
