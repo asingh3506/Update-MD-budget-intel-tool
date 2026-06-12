@@ -68,7 +68,7 @@ export default function Header() {
           </span>
         </div>
 
-        <nav style={{ display: "flex", gap: 2, marginLeft: 24 }}>
+        <nav style={{ display: "flex", gap: 2, marginLeft: 24, flex: 1 }}>
           {NAV.map((item) => {
             const active =
               item.href === "/"
@@ -109,6 +109,20 @@ export default function Header() {
             );
           })}
         </nav>
+
+        {/* NXT logo — right side of header */}
+        <img
+          src="/nxt-logo.png"
+          alt="NXT Partner LLC"
+          height={28}
+          style={{
+            flexShrink: 0,
+            display: "block",
+            objectFit: "contain",
+            marginLeft: "auto",
+            opacity: 0.92,
+          }}
+        />
       </div>
 
       {/* Maryland flag stripe */}

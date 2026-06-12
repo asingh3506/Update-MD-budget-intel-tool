@@ -55,10 +55,13 @@ button, input, select, textarea { font-family: var(--font); }
 
 body {
   font-family: var(--font);
-  /* NXT brand: Anti-Flash White base with subtle Dark Purple depth accents */
+  /* NXT brand gradient: Lavender Floral → Blue-Violet over Anti-Flash White */
   background:
-    radial-gradient(ellipse 900px 600px at -4% 0%,   rgba(33,16,48,0.10)  0%, transparent 55%),
-    radial-gradient(ellipse 700px 500px at 104% 0%,  rgba(85,28,142,0.07) 0%, transparent 52%),
+    linear-gradient(135deg,
+      rgba(179,118,246,0.22) 0%,
+      rgba(240,240,240,0)    45%,
+      rgba(128,44,215,0.15)  100%
+    ),
     #F0F0F0;
   background-attachment: fixed;
   color: var(--text);
