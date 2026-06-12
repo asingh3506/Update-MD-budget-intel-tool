@@ -3,10 +3,11 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const NAV = [
-  { label: "Home",         href: "/" },
-  { label: "Deep-Dive",    href: "https://md-budget-intel-deep-dive.netlify.app/" },
-  { label: "Methodology",  href: "/methodology" },
-  { label: "Guardrails",   href: "/guardrails" },
+  { label: "Trends Analysis",  href: "/" },
+  { label: "Agency Deep-Dive", href: "/deep-dive" },
+  { label: "Health",           href: "/health" },
+  { label: "Human Services",   href: "/human-services" },
+  { label: "County Map",       href: "/county-map" },
 ];
 
 export default function Header() {
@@ -18,11 +19,9 @@ export default function Header() {
         position: "sticky",
         top: 0,
         zIndex: 1000,
-        background: "rgba(255,255,255,0.97)",
-        backdropFilter: "blur(12px)",
-        WebkitBackdropFilter: "blur(12px)",
-        borderBottom: "1px solid var(--line)",
-        boxShadow: "0 1px 6px rgba(78,19,75,0.06)",
+        background: "#211030",
+        borderBottom: "1px solid rgba(255,255,255,0.10)",
+        boxShadow: "0 2px 12px rgba(33,16,48,0.35)",
       }}
     >
       <div
@@ -35,7 +34,6 @@ export default function Header() {
           gap: 14,
         }}
       >
-        {/* Logo — Maryland state crest shield */}
         <img
           src="/logo.png"
           alt="Maryland state crest"
@@ -48,9 +46,9 @@ export default function Header() {
           <span
             style={{
               fontSize: 15,
-              fontWeight: 900,
+              fontWeight: 800,
               letterSpacing: "-0.4px",
-              color: "var(--nxt-deep)",
+              color: "#F0F0F0",
               fontFamily: "var(--font-headline)",
               lineHeight: 1.1,
             }}
@@ -61,60 +59,51 @@ export default function Header() {
             style={{
               fontFamily: "var(--mono)",
               fontSize: 9,
-              color: "var(--text-mute)",
-              letterSpacing: "0.06em",
+              color: "rgba(179,118,246,0.8)",
+              letterSpacing: "0.08em",
               lineHeight: 1.2,
             }}
           >
-            Fiscal Analysis Tool
+            Fiscal Analysis · NXT Partner LLC
           </span>
         </div>
 
         <nav style={{ display: "flex", gap: 2, marginLeft: 24 }}>
           {NAV.map((item) => {
-            const isExternal = item.href.startsWith("http");
-            const active = !isExternal && (path === item.href || (item.href !== "/" && path.startsWith(item.href)) || (item.href.startsWith("/deep-dive") && path.startsWith("/deep-dive")));
-            const commonStyle = {
-              fontSize: 13,
-              fontWeight: 600,
-              color: active ? "var(--nxt-deep)" : "var(--text-mute)",
-              textDecoration: "none",
-              padding: "7px 14px",
-              borderRadius: 8,
-              background: active ? "var(--nxt-pink)" : "transparent",
-              borderBottom: active ? "2px solid var(--nxt-purple)" : "2px solid transparent",
-              transition: "all 0.18s",
-              whiteSpace: "nowrap",
-            } as const;
+            const active =
+              item.href === "/"
+                ? path === "/"
+                : path.startsWith(item.href);
 
-            const hoverHandlers = {
-              onMouseEnter: (e: React.MouseEvent<HTMLAnchorElement>) => {
-                if (!active) {
-                  e.currentTarget.style.color = "var(--nxt-purple)";
-                  e.currentTarget.style.background = "var(--nxt-lavender)";
-                }
-              },
-              onMouseLeave: (e: React.MouseEvent<HTMLAnchorElement>) => {
-                if (!active) {
-                  e.currentTarget.style.color = "var(--text-mute)";
-                  e.currentTarget.style.background = "transparent";
-                }
-              },
-            };
-
-            return isExternal ? (
-              <a
+            return (
+              <Link
                 key={item.href}
                 href={item.href}
-                target="_blank"
-                rel="noreferrer"
-                style={commonStyle}
-                {...hoverHandlers}
+                style={{
+                  fontSize: 12,
+                  fontWeight: 600,
+                  fontFamily: "var(--font)",
+                  color: active ? "#ffffff" : "rgba(240,240,240,0.65)",
+                  textDecoration: "none",
+                  padding: "7px 14px",
+                  borderRadius: 7,
+                  background: active ? "#802CD7" : "transparent",
+                  transition: "all 0.18s",
+                  whiteSpace: "nowrap",
+                } as React.CSSProperties}
+                onMouseEnter={(e) => {
+                  if (!active) {
+                    (e.currentTarget as HTMLAnchorElement).style.background = "rgba(128,44,215,0.25)";
+                    (e.currentTarget as HTMLAnchorElement).style.color = "#ffffff";
+                  }
+                }}
+                onMouseLeave={(e) => {
+                  if (!active) {
+                    (e.currentTarget as HTMLAnchorElement).style.background = "transparent";
+                    (e.currentTarget as HTMLAnchorElement).style.color = "rgba(240,240,240,0.65)";
+                  }
+                }}
               >
-                {item.label}
-              </a>
-            ) : (
-              <Link key={item.href} href={item.href} style={commonStyle} {...hoverHandlers}>
                 {item.label}
               </Link>
             );
@@ -123,11 +112,11 @@ export default function Header() {
       </div>
 
       {/* Maryland flag stripe */}
-      <div style={{ display: "flex", height: 4, width: "100%" }}>
+      <div style={{ display: "flex", height: 3, width: "100%" }}>
         <div style={{ flex: 1, background: "#CE1126" }} />
         <div style={{ flex: 1, background: "#E8A317" }} />
         <div style={{ flex: 1, background: "#000000" }} />
-        <div style={{ flex: 1, background: "#ffffff", borderBottom: "1px solid var(--line)" }} />
+        <div style={{ flex: 1, background: "#F0F0F0" }} />
       </div>
     </header>
   );

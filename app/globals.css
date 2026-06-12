@@ -46,14 +46,11 @@ html { scroll-behavior: smooth; }
 
 body {
   font-family: var(--font);
-  /* NXT Official Brand Background — uses exact brand palette from p.19 of Brand Guideline Book.
-     Dark Purple → Grape → Lavender Floral bloom. STRICTLY background only.
-     Visualizations, maps, and chart canvases retain their own backgrounds. */
+  /* NXT brand: Anti-Flash White base with subtle Dark Purple depth accents */
   background:
-    radial-gradient(ellipse 1100px 750px at -5% 0%,   rgba(33,16,48,0.22)   0%, transparent 52%),
-    radial-gradient(ellipse 800px 600px  at 105% 0%,  rgba(99,33,165,0.14)  0%, transparent 50%),
-    radial-gradient(ellipse 600px 500px  at 50%  95%, rgba(128,44,215,0.10) 0%, transparent 55%),
-    linear-gradient(160deg, #ede8f5 0%, #f2edf8 25%, #f6f2fb 55%, #faf8fd 80%, #ffffff 100%);
+    radial-gradient(ellipse 900px 600px at -4% 0%,   rgba(33,16,48,0.10)  0%, transparent 55%),
+    radial-gradient(ellipse 700px 500px at 104% 0%,  rgba(85,28,142,0.07) 0%, transparent 52%),
+    #F0F0F0;
   background-attachment: fixed;
   color: var(--text);
   -webkit-font-smoothing: antialiased;
