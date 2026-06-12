@@ -127,7 +127,7 @@ function KpiCard({ card }: { card: KpiCard }) {
           color: card.color,
           lineHeight: 1.05,
           marginBottom: 5,
-          fontFamily: "Georgia, serif",
+          fontFamily: "var(--font-headline)",
           letterSpacing: "-0.5px",
         }}
       >

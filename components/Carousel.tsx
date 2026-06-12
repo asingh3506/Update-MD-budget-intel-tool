@@ -158,7 +158,7 @@ function CitationBlock({ citations }: { citations: CitationLink[] }) {
   return (
     <div
       style={{
-        fontFamily: "Georgia, serif",
+        fontFamily: "var(--font-headline)",
         background: "#FAF6EE",
         borderTop: "3px double #0A0A0A",
         padding: "14px 18px 12px",
@@ -168,7 +168,7 @@ function CitationBlock({ citations }: { citations: CitationLink[] }) {
     >
       <div
         style={{
-          fontFamily: "'JetBrains Mono', ui-monospace, monospace",
+          fontFamily: "'var(--mono)'",
           fontSize: 10,
           letterSpacing: "2px",
           color: "#8A1538",
@@ -195,7 +195,7 @@ function CitationBlock({ citations }: { citations: CitationLink[] }) {
               color: "#1a1a1a",
               border: "1px solid #1a1a1a",
               textDecoration: "none",
-              fontFamily: "'JetBrains Mono', ui-monospace, monospace",
+              fontFamily: "'var(--mono)'",
               fontSize: 11,
               fontWeight: 700,
               borderRadius: 1,
@@ -506,7 +506,7 @@ export default function Carousel() {
                       fontWeight: 800,
                       color: "var(--nxt-deep)",
                       lineHeight: 1.3,
-                      fontFamily: "Georgia, serif",
+                      fontFamily: "var(--font-headline)",
                     }}
                   >
                     {s.title}

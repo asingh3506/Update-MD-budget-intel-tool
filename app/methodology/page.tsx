@@ -421,7 +421,7 @@ export default function MethodologyPage() {
                   onMouseLeave={(e) => { (e.currentTarget as HTMLDivElement).style.boxShadow = "0 2px 8px rgba(33,16,48,0.05)"; (e.currentTarget as HTMLDivElement).style.transform = "none"; }}
                 >
                   <div style={{ fontWeight: 900, fontSize: 13, color: "var(--nxt-dark)", marginBottom: 5 }}>{p.name}</div>
-                  <div style={{ fontSize: 11, fontStyle: "italic", color: p.color, marginBottom: 10, fontFamily: "Georgia, serif" }}>
+                  <div style={{ fontSize: 11, fontStyle: "italic", color: p.color, marginBottom: 10, fontFamily: "var(--font-headline)" }}>
                     &ldquo;{p.motto}&rdquo;
                   </div>
                   <div style={{ fontSize: 12, color: "var(--text-soft)", lineHeight: 1.6 }}>{p.how}</div>

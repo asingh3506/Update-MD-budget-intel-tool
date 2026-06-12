@@ -315,7 +315,7 @@ const HTML_TEMPLATE = `<!DOCTYPE html>
 <html><head><meta charset="UTF-8">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/plotly.js/2.27.0/plotly.min.js"><\/script>
 <style>
-*{box-sizing:border-box;margin:0;padding:0;font-family:Georgia,serif}
+*{box-sizing:border-box;margin:0;padding:0;font-family:Montserrat,Arial,sans-serif}
 body{background:#fff}
 .ctrl{display:flex;align-items:center;gap:10px;padding:10px 14px;border-bottom:1px solid #ddd;flex-wrap:wrap}
 .yr-btn{border:1.5px solid #ddd;background:white;border-radius:6px;padding:5px 14px;font-size:12px;cursor:pointer;font-weight:600;transition:all .15s}
@@ -373,9 +373,9 @@ function makeSankeySpec(d, title){
       link:{ source:d.src, target:d.tgt, value:d.val, color:d.lc, label:d.ll, hovertemplate:'%{label}<extra><\/extra>' }
     }],
     layout:{
-      title:{text:'<b>'+title+'<\/b>  <span style="font-size:11px;color:#888">'+DATA[yr].label+'<\/span>', x:0.02, xanchor:'left', font:{size:13,color:'#121212',family:'Georgia,serif'}},
+      title:{text:'<b>'+title+'<\/b>  <span style="font-size:11px;color:#888">'+DATA[yr].label+'<\/span>', x:0.02, xanchor:'left', font:{size:13,color:'#121212',family:'Montserrat,Arial,sans-serif'}},
       paper_bgcolor:'#fff', plot_bgcolor:'#fff',
-      font:{color:'#333',size:11,family:'Georgia,serif'},
+      font:{color:'#333',size:11,family:'Montserrat,Arial,sans-serif'},
       height:560, margin:{t:50,l:6,r:6,b:16}
     },
     config:{responsive:true,displayModeBar:true,modeBarButtonsToRemove:['select2d','lasso2d'],displaylogo:false}
@@ -469,7 +469,7 @@ export default function SankeyChart() {
     <div style={{ padding: "16px 20px 0" }}>
       <h3
         style={{
-          fontFamily: "Georgia, serif",
+          fontFamily: "var(--font-headline)",
           fontSize: 18,
           fontWeight: 800,
           color: "var(--nxt-deep)",

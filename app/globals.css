@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Roboto:wght@300;400;500;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
 
 @import "tailwindcss";
 
@@ -28,7 +28,8 @@
   --amber:        #D97706;
   --flag-red:     #CE1126;
   --flag-gold:    #E8A317;
-  --font:         'IBM Plex Sans', 'Segoe UI', system-ui, sans-serif;
+  --font:         'Roboto', Arial, sans-serif;
+  --font-headline:'Montserrat', Arial, sans-serif;
   --mono:         'JetBrains Mono', monospace;
   --c-ink:        #121212;
   --c-red:        #C41230;

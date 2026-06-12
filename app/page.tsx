@@ -40,7 +40,7 @@ export default function HomePage() {
           </div>
           <h2
             style={{
-              fontFamily: "Georgia, serif",
+              fontFamily: "var(--font-headline)",
               fontSize: 36,
               fontWeight: 900,
               color: "var(--nxt-deep)",
@@ -53,7 +53,7 @@ export default function HomePage() {
           </h2>
           <p
             style={{
-              fontFamily: "Georgia, serif",
+              fontFamily: "var(--font-headline)",
               fontStyle: "italic",
               fontSize: 14,
               color: "#666",
@@ -116,7 +116,7 @@ export default function HomePage() {
         >
           <h3
             style={{
-              fontFamily: "Georgia, serif",
+              fontFamily: "var(--font-headline)",
               fontSize: 21,
               fontWeight: 800,
               color: "var(--nxt-deep)",
@@ -149,7 +149,7 @@ export default function HomePage() {
         >
           <h3
             style={{
-              fontFamily: "Georgia, serif",
+              fontFamily: "var(--font-headline)",
               fontSize: 21,
               fontWeight: 800,
               color: "var(--nxt-deep)",

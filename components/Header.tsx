@@ -51,7 +51,7 @@ export default function Header() {
               fontWeight: 900,
               letterSpacing: "-0.4px",
               color: "var(--nxt-deep)",
-              fontFamily: "Georgia, serif",
+              fontFamily: "var(--font-headline)",
               lineHeight: 1.1,
             }}
           >

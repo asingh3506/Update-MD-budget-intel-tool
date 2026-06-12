@@ -78,7 +78,7 @@ export default function StructuralGapChart() {
         layout={{
           paper_bgcolor: "white",
           plot_bgcolor: "white",
-          font: { family: "Georgia, serif", size: 11, color: "#121212" },
+          font: { family: "var(--font-headline)", size: 11, color: "#121212" },
           margin: { t: 18, r: 20, b: 40, l: 60 },
           yaxis: {
             title: { text: "$ Billions" } as never,
@@ -111,7 +111,7 @@ export default function StructuralGapChart() {
               yref: "paper",
               text: "ARPA federal aid",
               showarrow: false,
-              font: { color: "#B8860B", size: 9, family: "Georgia, serif" },
+              font: { color: "#B8860B", size: 9, family: "var(--font-headline)" },
               yanchor: "bottom",
             },
             {
@@ -120,7 +120,7 @@ export default function StructuralGapChart() {
               showarrow: true,
               arrowhead: 2,
               arrowcolor: "#C41230",
-              font: { color: "#C41230", size: 11, family: "Georgia, serif" },
+              font: { color: "#C41230", size: 11, family: "var(--font-headline)" },
               ax: -60, ay: -20,
             },
             {
@@ -129,7 +129,7 @@ export default function StructuralGapChart() {
               showarrow: true,
               arrowhead: 2,
               arrowcolor: "#C41230",
-              font: { color: "#C41230", size: 10, family: "Georgia, serif" },
+              font: { color: "#C41230", size: 10, family: "var(--font-headline)" },
               ax: -50, ay: -30,
             },
           ],
@@ -158,7 +158,7 @@ export default function StructuralGapChart() {
           layout={{
             paper_bgcolor: "white",
             plot_bgcolor: "white",
-            font: { family: "Georgia, serif", size: 10, color: "#121212" },
+            font: { family: "var(--font-headline)", size: 10, color: "#121212" },
             margin: { t: 4, r: 20, b: 30, l: 60 },
             yaxis: {
               title: { text: "Surplus / Deficit" } as never,

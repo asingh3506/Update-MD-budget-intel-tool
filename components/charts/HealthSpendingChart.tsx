@@ -46,7 +46,7 @@ export default function HealthSpendingChart() {
         layout={{
           paper_bgcolor: "white",
           plot_bgcolor: "white",
-          font: { family: "Georgia, serif", size: 11, color: "#121212" },
+          font: { family: "var(--font-headline)", size: 11, color: "#121212" },
           margin: { t: 18, r: 30, b: 40, l: 65 },
           yaxis: {
             title: { text: "$ Billions" } as never,
@@ -65,7 +65,7 @@ export default function HealthSpendingChart() {
               showarrow: true,
               arrowhead: 2,
               arrowcolor: "#C41230",
-              font: { color: "#C41230", size: 11, family: "Georgia, serif" },
+              font: { color: "#C41230", size: 11, family: "var(--font-headline)" },
               ax: -70,
               ay: -25,
             },
@@ -76,7 +76,7 @@ export default function HealthSpendingChart() {
               showarrow: true,
               arrowhead: 2,
               arrowcolor: "#1D4F91",
-              font: { color: "#1D4F91", size: 11, family: "Georgia, serif" },
+              font: { color: "#1D4F91", size: 11, family: "var(--font-headline)" },
               ax: -70,
               ay: -20,
             },

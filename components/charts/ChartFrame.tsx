@@ -19,11 +19,11 @@ interface Props {
  */
 export default function ChartFrame({ title, deck, source, children, compact }: Props) {
   return (
-    <div style={{ fontFamily: "Georgia, 'DejaVu Serif', 'Times New Roman', serif", background: "white" }}>
+    <div style={{ fontFamily: "var(--font)", background: "white" }}>
       {/* Title */}
       <h3
         style={{
-          fontFamily: "Georgia, serif",
+          fontFamily: "var(--font-headline)",
           fontSize: compact ? 16 : 19,
           fontWeight: 800,
           color: "#121212",
@@ -40,7 +40,7 @@ export default function ChartFrame({ title, deck, source, children, compact }: P
       {deck && (
         <p
           style={{
-            fontFamily: "Georgia, serif",
+            fontFamily: "var(--font-headline)",
             fontStyle: "italic",
             fontSize: compact ? 11 : 12,
             color: "#666666",
@@ -65,7 +65,7 @@ export default function ChartFrame({ title, deck, source, children, compact }: P
             marginTop: 10,
             fontSize: 10,
             color: "#9B9B9B",
-            fontFamily: "'JetBrains Mono', ui-monospace, monospace",
+            fontFamily: "'var(--mono)'",
             borderTop: "1px solid #EEEEEE",
             paddingTop: 6,
             lineHeight: 1.5,
