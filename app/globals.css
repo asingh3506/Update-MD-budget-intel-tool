@@ -55,15 +55,8 @@ button, input, select, textarea { font-family: var(--font); }
 
 body {
   font-family: var(--font);
-  /* NXT brand gradient: Lavender Floral → Blue-Violet over Anti-Flash White */
-  background:
-    linear-gradient(135deg,
-      rgba(179,118,246,0.22) 0%,
-      rgba(240,240,240,0)    45%,
-      rgba(128,44,215,0.15)  100%
-    ),
-    #F0F0F0;
-  background-attachment: fixed;
+  /* NXT brand gradient: Lavender Floral → Blue-Violet tints */
+  background: linear-gradient(160deg, #ede5f8 0%, #f6f1fd 45%, #e8d8f9 100%);
   color: var(--text);
   -webkit-font-smoothing: antialiased;
   min-height: 100vh;

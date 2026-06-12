@@ -114,12 +114,13 @@ export default function Header() {
         <img
           src="/nxt-logo.png"
           alt="NXT Partner LLC"
-          height={28}
           style={{
             flexShrink: 0,
             display: "block",
+            height: 28,
+            width: "auto",
+            maxWidth: 110,
             objectFit: "contain",
-            marginLeft: "auto",
             opacity: 0.92,
           }}
         />
